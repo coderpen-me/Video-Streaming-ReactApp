@@ -1,0 +1,9 @@
+.creator-display-view {
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: -webkit-fill-available;
+}
