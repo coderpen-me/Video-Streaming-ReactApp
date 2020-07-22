@@ -2,6 +2,7 @@ import React from "react";
 import ToggleView from "./ToggleView.jsx"
 import SwipeComp from "./SwipeComp.jsx"
 import '../Styling/ToggleView.css';
+var localData = require('../local.json');
 
 /*
 
@@ -26,16 +27,14 @@ class Display extends React.Component {
             .then(response => response.json())
             .then(data => this.setState({ items: data }))
             .catch(error => {
-                fetch('./local.json')
-                    .then(response => response.json())
-                    .then(data => this.setState({ items: data }))
+                this.setState({ items: localData });
             });
     }
 
     // This function will show next video from data fetched.
     nextItem(prevKey) {
         console.log(prevKey);
-        if(prevKey !== this.state.items.length - 1){
+        if (prevKey !== this.state.items.length - 1) {
             this.setState({ counter: prevKey + 1 });
         }
     }
@@ -43,7 +42,7 @@ class Display extends React.Component {
     // This function will show previous video from data fetched.
     prevItem(prevKey) {
         console.log(prevKey);
-        if(prevKey !== 0){
+        if (prevKey !== 0) {
             this.setState({ counter: prevKey - 1 });
         }
     }
