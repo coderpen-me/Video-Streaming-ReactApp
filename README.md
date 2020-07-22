@@ -1,9 +1,9 @@
 This project shows a prototype of video streaming service like Instagram Reels/Tiktok. 
 
-> There are 3 actions available,
-    - Swipe Up (To switch to next video)
-    - Swipe Down (To switch to previous video)
-    - Swipe Left (To view name of video creator)
+# There are 3 actions available,
+    > Swipe Up (To switch to next video)
+    > Swipe Down (To switch to previous video)
+    > Swipe Left (To view name of video creator)
 
 ## Available Scripts
 
